@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        
+    }
+    body{
+        font-size: 20px;
+        text-align: center;
+    }
+    .header{
+        background-color: #92dfc8; 
+        padding: 20px;  
+    }
+    .section1{
+        margin-bottom: 10px;
+    }
+    .section1 .content{
+        background-color: #CAEFF2;
+        padding: 20px;
+        height: 500px; 
+        float: left;
+        width: 70%;
+    }
+    .section1 .aside{
+        background-color: #f2d8ca;
+        padding: 20px;
+        height: 500px; 
+        float: right;
+        width: 30%;
+    }
+    .clear-fix{
+        clear: both;
+    }
+    
+    .section2 .box{
+        background-color: #f2f1ca;
+        padding: 15px;
+        height: 150px;
+        width: calc(25% - 30px/4);
+        float: left;
+        margin-right: 10px;
+    }
+    .section2 .box:nth-child(4){
+        margin-right: 0;
+    }
+    .footer{
+        background-color: #eecbf3;
+        padding: 15px;
+        height: 60px;
+        margin-top: 10px;
+    }
+
+
+    /*responsive*/
+    @media screen and (max-width: 768px){
+        .section1 .content{
+            width: 100%;
+        }
+        .section1 .aside{
+            width: 100%;
+        }
+        .section2 .box:nth-child(2){
+            margin-right: 0;
+        }
+        .section2 .box{   
+            width: calc(50% - 10px/2);
+            margin-bottom: 10px;
+        }
+        .footer{          
+            margin-top: 0px;
+        }
+    
+    }
+    @media screen and (max-width: 480px){
+        .section2 .box:nth-child(1){
+            margin-right: 0;
+        }
+        .section2 .box{   
+            width: calc(100%);
+            margin-bottom: 10px;
+        }
+    }
+
+</style>
+<body>
+    <header class="header">Header</header>
+    <main class="main">
+        <section class="section1">
+            <div class="content">Content</div>
+            <div class="aside">Aside</div>
+            <div class="clear-fix"></div>
+        </section>
+
+        <section class="section2">
+            <div class="box box1">Box1</div>
+            <div class="box box2">Box2</div>
+            <div class="box box3">Box3</div>
+            <div class="box box4">Box4</div>
+            
+        </section>
+        <div class="clear-fix"></div>
+        <footer class="footer">Footer</footer>
+    </main>
+</body>
+</html>
